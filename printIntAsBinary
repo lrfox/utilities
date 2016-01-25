@@ -1,5 +1,5 @@
-void printBinary(int val) {
-   int loc, bit, nibbleSize = 4;
+void printBinary(unsigned val) {
+   int loc, bit, nibbleSize = 4; //default nibbleSize = 4
    for (loc = 31; loc >= 0; loc--) {
       bit = val >> loc;
       if (bit & 1)
