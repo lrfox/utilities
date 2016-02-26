@@ -1,0 +1,17 @@
+//show drives
+parted -l
+
+//mount
+///     filesystem drive+partitionNum destination
+mount -t ntfs /dev/sdi1 /mnt
+
+//unmount
+umount /mnt
+
+//see what's using drive
+lsof /mnt/dir
+///or
+fuser -vm /mnt/dir
+
+//find DOS invalid chars in file names (ex.  <>:"/\|?*'  )
+find . -name "*\>*"
