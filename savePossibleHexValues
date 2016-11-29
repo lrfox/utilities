@@ -1,7 +1,10 @@
+#used to create a txt file with all possible hex values on a new line from 0 to max, where max is determined by number of bits |r|
+
 import time
 start_time = time.clock()
 
 #calc using http://www.calculatorsoup.com/calculators/discretemathematics/permutations.php where |r| is # of bits and |n| is 16
+
 max = 29059430400 #possible options for 10 bit hex
 
 
@@ -11,7 +14,7 @@ fileName = "listPossHex.txt"
 while cur != max:
     with open(fileName, "a") as myfile:
                 #hex = "%02" % hex(cur)
-                myfile.write(format(cur, '010x')) #change |010| to |0v| where "v" is the number used for |r| above
+                myfile.write(format(cur, '010x'))        #change |010| to |0v| where "v" is the number used for |r| above
                 myfile.write("\n")
     cur = cur + 1
 
